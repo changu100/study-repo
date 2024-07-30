@@ -35,6 +35,12 @@ dependencies {
     testImplementation("io.projectreactor:reactor-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
+    implementation ("org.redisson:redisson-spring-data-27:3.33.0")
+    implementation ("org.redisson:redisson-spring-boot-starter:3.33.0") {
+        exclude(group = "org.redisson", module = "redisson-spring-data-33")
+    }
 }
 
 kotlin {
